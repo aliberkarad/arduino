@@ -1,18 +1,18 @@
 # Arduino Kalman Filter Trial  		 	 	 	 	 	
->Kalman Filtresi, durum uzayı modeli ile gösterilen bir dinamik sistemde, modelin önceki bilgileriyle birlikte giriş ve çıkış bilgilerinden sistemin durumlarını tahmin edilebilen filtredir. Macar asıllı Amerikan matematiksel sistem teoristi Rudolf Kalman tarafından bulunmuştur.
+>The Kalman Filter is a filter that can predict the states of the system from the input and output information, together with the previous information of the model, in a dynamic system represented by the state space model. It was invented by the Hungarian-American mathematical systems theorist Rudolf Kalman.
 
-Kalman filtresinin basit bir uygulaması olarak Arduino ve potansiyometre ile deneyi gerçekleştirilecek. Deneyde sistemden alınan sinyal için potansiyometre kullanılmaktadır.
+As a simple application of the Kalman filter, the experiment will be carried out with Arduino and potentiometer. In the experiment, a potentiometer is used for the signal received from the system.
 
 ![image](https://user-images.githubusercontent.com/43043692/128352265-a3aeb179-a977-4ec0-b4cd-d0494c091b68.png)
 
-Şekildeki devremiz Arduino Uno kullanılarak kartın A0 analog bacağına bağlı potansiyometre ile anlık değişebilen değerlerin oluşturulması için oluşturuldu.
-Oluşturulan [kod](uno-pot-control.ino) sayesinde Arduino, pot ile okunan değerleri seri iletişim portu ( `Serial.print()` ) üzerinden MATLAB uygulamasına gönderecek.
+Our circuit in the figure was created using Arduino Uno to create instantaneously variable values with a potentiometer connected to the A0 analog leg of the board.
+With the generated [code](uno-pot-control.ino), Arduino will send the values read with the pot to the MATLAB application via the serial communication port ( `Serial.print()` ).
 
 ---------------------------------------
 
-MATLAB uygulaması kullanılarak Arduino seri iletişimi dinlenerek gelen değerler, yazılan [MATLAB koduyla](kalman-matlab.m) kalman filtreden geçirilecektir. Daha sonrasında hesaplanan değerler ve nominal değerler kullanılarak anlık olarak grafik çizdirişi gerçekleştirilecektir.
-Çizdirme işleminde grafik aralığının belirlenmesinde `for` döngüsü kullanılmıştır. İstenirse `for` içerisindeki `i` değeri değiştirilerek daha fazla örnek alınabilir.
+By listening to Arduino serial communication using MATLAB application, the incoming values will be filtered by the written [MATLAB code](kalman-matlab.m). Then, using the calculated and nominal values, the graphic will be drawn instantly.
+In the drawing process, the `for` loop is used to determine the graphic range. If desired, more samples can be taken by changing the `i` value in `for`.
 
-__Programın işlenmesiyle beraber alınan grafik örneği;__
+__This output is taken as result of the program;__
 
 ![image](https://user-images.githubusercontent.com/43043692/128352373-09dd34cd-87e0-4c2b-b283-29f6920ed6c7.png)
