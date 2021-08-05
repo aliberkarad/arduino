@@ -3,7 +3,7 @@ Kalman Filtresi, durum uzayı modeli ile gösterilen bir dinamik sistemde, model
 
 Kalman filtresinin basit bir uygulaması olarak Arduino ve potansiyometre ile deneyi gerçekleştirilecek. Deneyde sistemden alınan sinyal için potansiyometre kullanılmaktadır.
 
-![]()
+![image](https://user-images.githubusercontent.com/43043692/128352265-a3aeb179-a977-4ec0-b4cd-d0494c091b68.png)
 
 Şekildeki devremiz Arduino Uno kullanılarak kartın A0 analog bacağına bağlı potansiyometre ile anlık değişebilen değerlerin oluşturulması için oluşturuldu.
 
@@ -16,4 +16,4 @@ MATLAB uygulaması kullanılarak Arduino seri iletişimi dinlenerek gelen değer
 
 Programın işlenmesiyle beraber alınan grafik örneği;
 
-![]()
+![image](https://user-images.githubusercontent.com/43043692/128352373-09dd34cd-87e0-4c2b-b283-29f6920ed6c7.png)
